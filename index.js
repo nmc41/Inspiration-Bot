@@ -5,10 +5,6 @@ const client = new Discord.Client();
 const fetch = require('node-fetch');
 const url = 'https://type.fit/api/quotes';
 
-fetch(url)
-    .then(response => response.json())
-    .then(data => console.log(JSON.stringify(data)));
-
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
