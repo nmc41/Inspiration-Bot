@@ -1,5 +1,6 @@
+// const { token } = require('./config.json');
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+const prefix = '!';
 const client = new Discord.Client();
 const fetch = require('node-fetch');
 const url = 'https://type.fit/api/quotes';
@@ -37,5 +38,5 @@ client.on('message', message => {
 });
 
 
-client.login(token);
+client.login(process.env.DJS_TOKEN);
 
